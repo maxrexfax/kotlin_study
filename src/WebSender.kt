@@ -1,5 +1,8 @@
-class WebSender: Thread() {
-    var _result: String = "111"
+class WebSender(result: String): Thread() {
+    var _result: String
+    init {
+        _result = result
+    }
 
 
     public override fun run() {

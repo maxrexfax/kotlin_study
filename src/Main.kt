@@ -1,3 +1,5 @@
+import ru.maxbarannyk.helpers.WebSendHelper
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main(args : Array<String>) {
@@ -32,7 +34,7 @@ fun main(args : Array<String>) {
 //    print("userDataConstr00.printUserData():")
 //    println(userDataConstr00.toString())
 
-    val webSender = WebSender()
+    val webSender = WebSendHelper("https://api.maxbarannyk.ru/test-return-post", "testKey0001", "testValue0001")
     val innerResultBefore = webSender.getResult()
     println("innerResultBefore:" + innerResultBefore)
     webSender.start()
